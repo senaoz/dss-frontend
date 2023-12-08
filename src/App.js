@@ -86,9 +86,25 @@ function App() {
         </div>
       </div>
 
-      <House />
+      <h1 className="pb-2">Featured Properties</h1>
+      <div className="grid grid-cols-2 gap-4">
+        <HouseCard />
+        <HouseCard />
+        <HouseCard />
+        <HouseCard />
+      </div>
 
-      <HouseCard />
+      <h1 className="pt-10 pb-2">
+        Top <span className="text-blue-500">Seattle</span> Properties
+      </h1>
+      <div className="grid grid-cols-2 gap-4">
+        <HouseCard />
+        <HouseCard />
+        <HouseCard />
+        <HouseCard />
+      </div>
+
+      <House />
     </div>
   );
 }
