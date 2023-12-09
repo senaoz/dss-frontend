@@ -1,43 +1,38 @@
-export default function House({ house }) {
-  house = {
-    id: 4594,
-    house_id: "2470100110",
-    date: "2014-08-04",
-    price: 5570000,
-    bedrooms: 5,
-    bathrooms: 5,
-    created_at: "2023-12-08 20:14:50.268292",
-    updated_at: "2023-12-08 20:14:50.268615",
-    published_at: "2023-12-08 20:14:50.268742",
-    created_by_id: 1,
-    updated_by_id: 1,
-    sqft_living: 9200,
-    sqft_lot: 35069,
-    floors: 2,
-    waterfront: 0,
-    view: 0,
-    condition: 3,
-    grade: 13,
-    sqft_above: 6200,
-    sqft_basement: 3000,
-    yr_built: 2001,
-    yr_renovated: 0,
-    zipcode: 98039,
-    lat: 47.6289,
-    long: -122.233,
-    sqft_living_15: 3560,
-    sqft_lot_15: 24345,
+import { useParams } from "react-router-dom";
+import { API, BASE_URL } from "../../service/constant";
+import { useEffect, useState } from "react";
+
+export default function House() {
+  let { id } = useParams();
+  const [theHouse, setTheHouse] = useState({});
+
+  const getHouse = async (id) => {
+    const response = await fetch(`${BASE_URL}/houses/${id}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${API}`,
+      },
+    }).then((response) => response.json());
+
+    return response;
   };
+
+  useEffect(() => {
+    getHouse(id).then((data) => setTheHouse(data.data));
+  }, [id]);
+
+  let house = theHouse.attributes ? theHouse.attributes : {};
 
   house.image = `https://source.unsplash.com/1600x900/?house,${house?.zipcode}`;
   house.name = `${house?.bedrooms} Bed ${house?.bathrooms} Bath House in #${house?.zipcode}`;
   house.location = `${house?.lat}, ${house?.long}`;
   house.pricePerSqft = Math.round(house.price / house.sqft_living);
 
-  return (
+  return house.bedrooms ? (
     <>
-      <div className="flex gap-8 pb-8 items-center">
-        <div className="grid w-1/2 space-y-4">
+      <div className="flex gap-8 pt-24 pb-6 items-center">
+        <div className="grid w-2/5 space-y-4">
           <h1>{house.name}</h1>
           <div className="flex align-baseline gap-x-4">
             <h3 className="text-blue-700 flex items-center">
@@ -53,9 +48,9 @@ export default function House({ house }) {
                 height="24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className="mr-1 text-slate-400"
                 aria-hidden="true"
               >
@@ -72,50 +67,61 @@ export default function House({ house }) {
             a {house.sqft_lot.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}{" "}
             sqft lot.
           </div>
+
           <table>
-            <tr>
-              <th>Attribute</th>
-              <th>Value</th>
-            </tr>
-            <tr>
-              <td>Renovated</td>
-              <td>
-                {house.yr_renovated === 0
-                  ? "No"
-                  : `It was renovated in ${house.yr_renovated}`}
-              </td>
-            </tr>
-            <tr>
-              <td>Waterfront</td>
-              <td>{house.waterfront === 0 ? "No" : "Yes"}</td>
-            </tr>
-            <tr>
-              <td>Condition</td>
-              <td>{house.condition}</td>
-            </tr>
-            <tr>
-              <td>School Grade</td>
-              <td>{house.grade}</td>
-            </tr>
-            <tr>
-              <td>Number of floors</td>
-              <td>{house.floors}</td>
-            </tr>
-            <tr>
-              <td>View</td>
-              <td>{house.view}</td>
-            </tr>
-            <tr>
-              <td>Living room area</td>
-              <td>{house.sqft_living}</td>
-            </tr>
-            <tr>
-              <td>Lot area</td>
-              <td>{house.sqft_lot}</td>
-            </tr>
+            <tbody>
+              <tr>
+                <th>Attribute</th>
+                <th>Value</th>
+              </tr>
+              <tr>
+                <td>Renovated</td>
+                <td>
+                  {house.yr_renovated === 0
+                    ? "No"
+                    : `Renovated in ${house.yr_renovated}`}
+                </td>
+              </tr>
+              <tr>
+                <td>Waterfront</td>
+                <td>{house.waterfront === 0 ? "No" : "Yes"}</td>
+              </tr>
+              <tr>
+                <td>Condition</td>
+                <td>{house.condition}</td>
+              </tr>
+              <tr>
+                <td>School Grade</td>
+                <td>{house.grade}</td>
+              </tr>
+              <tr>
+                <td>Number of floors</td>
+                <td>{house.floors}</td>
+              </tr>
+              <tr>
+                <td>View</td>
+                <td>{house.view}</td>
+              </tr>
+              <tr>
+                <td>Living room area</td>
+                <td>
+                  {house.sqft_living
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                </td>
+              </tr>
+              <tr>
+                <td>Lot area</td>
+                <td>
+                  {house.sqft_lot
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                </td>
+              </tr>
+            </tbody>
           </table>
         </div>
-        <div className="not-prose space-y-4 w-1/2 h-fit">
+        <div className="not-prose space-y-4 w-3/5 h-fit">
           <img
             src={house.image}
             alt=""
@@ -150,6 +156,9 @@ export default function House({ house }) {
         allowFullScreen
         src={`https://www.google.com/maps/embed/v1/place?key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}&q=${house.lat},${house.long}`}
       ></iframe>
+      <div className="pb-16"></div>
     </>
+  ) : (
+    <div>Loading...</div>
   );
 }

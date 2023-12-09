@@ -1,3 +1,4 @@
-export const API = process.env.REACT_APP_API;
+export const API =
+  "a0db66e011b1ba307a564d36d86b8ae2c3922f5d0735ec851dabe26253e11c7dfcc041c4d8837e8c6d31c70274e00ff3ded86675b339f343202d703fdfba2433063626c2ffa8ce90dbe1864606355b938fafa86d9a2b1324be7c4253d108335d5d3a75cb823bef92521fcf5094d42a3c18204443a62989c757f3ba79ca4ea670";
 export const AUTH_TOKEN = "authToken";
-export const BASE_URL = process.env.REACT_APP_STRAPI_API_URL;
+export const BASE_URL = "http://localhost:1337/api";
