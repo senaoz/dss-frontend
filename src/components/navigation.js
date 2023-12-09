@@ -1,16 +1,17 @@
 const Navigation = () => {
   const navigation = [
-    { name: "Product", href: "#" },
-    { name: "Features", href: "#" },
-    { name: "Marketplace", href: "#" },
-    { name: "Company", href: "#" },
+    { name: "Features", href: "/#" },
+    { name: "Aim Of Project", href: "/#aim" },
+    { name: "Data", href: "/#data" },
   ];
 
   return (
     <header className="flex justify-between items-center absolute inset-x-0 top-0 z-50 p-10">
-      <h2 className="font-normal">
-        Smart<b>Housing</b>Insights
-      </h2>
+      <a href="/">
+        <h2 className="font-normal">
+          Smart<b>Housing</b>Insights
+        </h2>
+      </a>
       <nav className="space-x-4">
         {navigation.map((item) => (
           <a key={item.name} href={item.href} className="uppercase">
@@ -19,7 +20,7 @@ const Navigation = () => {
         ))}
 
         <a href="#" className="uppercase button">
-          Button
+          Contact
         </a>
       </nav>
     </header>
