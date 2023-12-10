@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# House Price Prediction
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Aim of the Project
 
-## Available Scripts
+The aim of this project is to develop a house price prediction system that can be used by real estate agents and individuals to get an estimate of the price of a house. The system will be developed using a machine learning model that will be trained on a dataset of house prices in the United States. The model will be trained using the Linear Regression algorithm. 
 
-In the project directory, you can run:
+### Dataset
 
-### `npm start`
+The dataset used for this project is the [House Sales in King County, USA](https://www.kaggle.com/harlfoxem/housesalesprediction) dataset from Kaggle. The dataset contains house sale prices for King County, which includes Seattle. It includes homes sold between May 2014 and May 2015. It has 19 house features plus the price and the id columns, along with 21613 observations.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Machine Learning Model
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The machine learning model used for this project is the Linear Regression algorithm. Linear regression is a linear approach to modelling the relationship between a scalar response and one or more explanatory variables. The case of one explanatory variable is called simple linear regression. For more than one explanatory variable, the process is called multiple linear regression. This term is distinct from multivariate linear regression, where multiple correlated dependent variables are predicted, rather than a single scalar variable.
 
-### `npm test`
+## Frontend
+Welcome to the frontend of our House Price Prediction project to developed for Bogazici University MIS 463 - Decision Support Systems course. This section provides a comprehensive overview of the technologies and features implemented in the frontend to ensure a seamless and user-friendly experience.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Technologies
 
-### `npm run build`
+- The frontend is built using the React framework. React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications. React can be used in the development of single-page applications and mobile applications. React is only concerned with state management and rendering that state to the DOM, so creating React applications usually requires the use of additional libraries for routing, as well as certain client-side functionality.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- The frontend is styled using the Tailwind CSS framework. Tailwind CSS is a utility-first CSS framework for rapidly building custom user interfaces. Tailwind CSS is a highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles you have to fight to override.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The frontend is designed to be user-friendly and intuitive. The user is first greeted with a landing page that provides a brief overview of the project. The user can then navigate to the prediction page where they can enter the required information to get a prediction. The user can also navigate to the about page where they can learn more about the project and the team behind it.
 
-### `npm run eject`
+#### Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To run the frontend locally, you must first clone the repository. Then, navigate to the frontend directory and run the following command:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This will install all the required dependencies. Then, run the following command to start the frontend:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm start
+```
 
-## Learn More
+The frontend will be running on http://localhost:3000/.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Backend
 
-### Code Splitting
+You can find the backend of the project in the following repository: [DSS-Backend](https://github.com/senaoz/dss-backend)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
