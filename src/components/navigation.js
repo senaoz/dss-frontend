@@ -19,8 +19,8 @@ const Navigation = () => {
           </a>
         ))}
 
-        <a href="#" className="uppercase button">
-          Contact
+        <a href="/#predict" className="uppercase button">
+          Predict
         </a>
       </nav>
     </header>

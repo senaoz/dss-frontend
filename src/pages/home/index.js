@@ -2,6 +2,7 @@ import HouseCard from "../../components/houseCard";
 import { API, BASE_URL } from "../../service/constant";
 import { useEffect, useState } from "react";
 import executeModel from "../../service/executeModel";
+import PredictionForm from "../../components/predictionForm";
 
 const Home = () => {
   const [mostPricedHouses, setMostPricedHouses] = useState([]);
@@ -103,7 +104,13 @@ const Home = () => {
         />
       </div>
 
-      <h1 className="pb-5 ">Highest Priced Properties</h1>
+      <div id="predict" className="pb-32">
+        <h1 className="pt-5">Predict the price of your property!</h1>
+        <h2 className="pt-3 pb-5 text-blue-500">Fill out the form below</h2>
+        <PredictionForm />
+      </div>
+
+      <h1 className="pb-5">Highest Priced Properties</h1>
       <div className="grid grid-cols-2 gap-4">
         {mostPricedHouses?.map((house) => (
           <HouseCard key={house.id} house={house} />
