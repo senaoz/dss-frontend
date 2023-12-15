@@ -1,6 +1,7 @@
 import HouseCard from "../../components/houseCard";
 import { API, BASE_URL } from "../../service/constant";
 import { useEffect, useState } from "react";
+import executeModel from "../../service/executeModel";
 
 const Home = () => {
   const [mostPricedHouses, setMostPricedHouses] = useState([]);

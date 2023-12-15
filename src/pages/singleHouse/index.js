@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { API, BASE_URL } from "../../service/constant";
 import { useEffect, useState } from "react";
+import executeModel from "../../service/executeModel";
 
 export default function House() {
   let { id } = useParams();
@@ -29,6 +30,34 @@ export default function House() {
   house.location = `${house?.lat}, ${house?.long}`;
   house.pricePerSqft = Math.round(house.price / house.sqft_living);
 
+  let userInput = [
+    3, // bedrooms
+    1, // bathrooms
+    1180, // sqft_living
+    5650, // sqft_lot
+    1, // floors
+    0, // waterfront
+    0, // view
+    3, // condition
+    7, // grade
+    1180, // sqft_above
+    0, // sqft_basement
+    1955, // yr_built
+    0, // yr_renovated
+    98178, // zipcode
+    47.5112, // lat
+    -122.257, // long
+    1340, // sqft_living15
+    5650, // sqft_lot15
+    2014, // year
+    10, // month
+    13, // day
+  ];
+
+  executeModel(userInput).then((data) => {
+    console.log(data);
+  });
+
   return house.bedrooms ? (
     <>
       <div className="flex gap-8 pt-24 pb-6 items-center">
@@ -36,10 +65,7 @@ export default function House() {
           <h1>{house.name}</h1>
           <div className="flex align-baseline gap-x-4">
             <h3 className="text-blue-700 flex items-center">
-              {house.price.toLocaleString("en-US", {
-                style: "currency",
-                currency: "USD",
-              })}
+              ${house.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
             </h3>
 
             <span className="flex items-center">
