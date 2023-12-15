@@ -82,10 +82,10 @@ const Home = () => {
             21,000 data points.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <a href="#" className="button">
+            <a href="/#predict" className="button">
               Get started
             </a>
-            <a href="#" className="font-semibold">
+            <a href="/#aim" className="font-semibold">
               Learn more <span aria-hidden="true">→</span>
             </a>
           </div>

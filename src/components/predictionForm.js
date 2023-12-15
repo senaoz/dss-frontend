@@ -1,7 +1,3 @@
-// we will use this to make our API calls
-// form to get user input
-// input fields for each feature of the house (bedrooms, bathrooms, etc.) and a submit button
-
 import { useState } from "react";
 import executeModel from "../service/executeModel";
 
@@ -90,7 +86,9 @@ function PredictionForm() {
 
   return (
     <>
-      <h1 className="text-2xl font-bold pb-5">{formattedPrice}</h1>
+      <h1 className="text-2xl font-bold pb-5">
+        {formattedPrice ? `Predicted Price: ${formattedPrice}` : ``}
+      </h1>
       <form onSubmit={handleSubmit} className="grid gap-4">
         <div className="grid grid-cols-2 gap-4">
           <label>
