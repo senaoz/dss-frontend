@@ -20,3 +20,11 @@ h1, h2, h3, h4, h5, h6 {
 dd {
     @apply ml-0 pl-0 !important;
 }
+
+label {
+    @apply flex justify-between items-center;
+}
+
+input {
+    @apply block w-8/12 bg-gray-100 border border-gray-300 rounded-lg py-2 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500;
+}
