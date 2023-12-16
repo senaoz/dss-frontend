@@ -26,30 +26,32 @@ let userInput = [
 ];
 
 function PredictionForm() {
-  const [bedrooms, setBedrooms] = useState(1);
-  const [bathrooms, setBathrooms] = useState(1);
-  const [sqft_living, setSqft_living] = useState(1000);
-  const [sqft_lot, setSqft_lot] = useState(1000);
-  const [floors, setFloors] = useState(1);
-  const [waterfront, setWaterfront] = useState(0);
-  const [view, setView] = useState(0);
-  const [condition, setCondition] = useState(4);
-  const [grade, setGrade] = useState(1);
-  const [sqft_above, setSqft_above] = useState(1000);
-  const [sqft_basement, setSqft_basement] = useState(1000);
-  const [yr_built, setYr_built] = useState(1990);
-  const [yr_renovated, setYr_renovated] = useState(0);
-  const [zipcode, setZipcode] = useState(0);
-  const [lat, setLat] = useState(0);
-  const [long, setLong] = useState(0);
-  const [sqft_living15, setSqft_living15] = useState(0);
-  const [sqft_lot15, setSqft_lot15] = useState(0);
-  const [year, setYear] = useState(2014);
-  const [month, setMonth] = useState(1);
-  const [day, setDay] = useState(1);
+  const [bedrooms, setBedrooms] = useState(userInput[0]);
+  const [bathrooms, setBathrooms] = useState(userInput[1]);
+  const [sqft_living, setSqft_living] = useState(userInput[2]);
+  const [sqft_lot, setSqft_lot] = useState(userInput[3]);
+  const [floors, setFloors] = useState(userInput[4]);
+  const [waterfront, setWaterfront] = useState(userInput[5]);
+  const [view, setView] = useState(userInput[6]);
+  const [condition, setCondition] = useState(userInput[7]);
+  const [grade, setGrade] = useState(userInput[8]);
+  const [sqft_above, setSqft_above] = useState(userInput[9]);
+  const [sqft_basement, setSqft_basement] = useState(userInput[10]);
+  const [yr_built, setYr_built] = useState(userInput[11]);
+  const [yr_renovated, setYr_renovated] = useState(userInput[12]);
+  const [zipcode, setZipcode] = useState(userInput[13]);
+  const [lat, setLat] = useState(userInput[14]);
+  const [long, setLong] = useState(userInput[15]);
+  const [sqft_living15, setSqft_living15] = useState(userInput[16]);
+  const [sqft_lot15, setSqft_lot15] = useState(userInput[17]);
+  const [year, setYear] = useState(userInput[18]);
+  const [month, setMonth] = useState(userInput[19]);
+  const [day, setDay] = useState(userInput[20]);
+
   const [formattedPrice, setFormattedPrice] = useState("");
 
   const handleSubmit = (e) => {
+    setFormattedPrice("Loading...");
     e.preventDefault();
     userInput = [
       bedrooms,
@@ -226,7 +228,6 @@ function PredictionForm() {
               type="number"
               value={lat}
               onChange={(e) => setLat(e.target.value)}
-              min="0"
             />
           </label>
           <label>
@@ -235,7 +236,6 @@ function PredictionForm() {
               type="number"
               value={long}
               onChange={(e) => setLong(e.target.value)}
-              min="0"
             />
           </label>
           <label>
