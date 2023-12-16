@@ -137,8 +137,22 @@ const Home = () => {
         </p>
       </div>
 
+      <div id="PowerBI">
+        <h2 className="pt-12 pb-5">
+          PowerBI Dashboard for House Sales in King County, USA
+        </h2>
+        <iframe
+          title="463"
+          className="w-full"
+          height="600"
+          src="https://app.powerbi.com/reportEmbed?reportId=0b6a9638-b3e6-4411-a3db-2da0b30ab866&autoAuth=true&ctid=7d6722ae-0c2d-4abf-8151-90e590a56e3b"
+          frameBorder="0"
+          allowFullScreen="true"
+        ></iframe>
+      </div>
+
       <div id="data">
-        <h2 className="pt-6 pb-5">
+        <h2 className="pt-12 pb-5">
           Data Source: House Sales in King County, USA
         </h2>
         <p>

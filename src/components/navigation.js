@@ -1,6 +1,6 @@
 const Navigation = () => {
   const navigation = [
-    { name: "Features", href: "/#" },
+    { name: "PowerBI", href: "/#PowerBI" },
     { name: "Aim Of Project", href: "/#aim" },
     { name: "Data", href: "/#data" },
   ];
