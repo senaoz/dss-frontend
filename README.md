@@ -2,7 +2,7 @@
 
 ## Aim of the Project
 
-The aim of this project is to develop a house price prediction system that can be used by real estate agents and individuals to get an estimate of the price of a house. The system will be developed using a machine learning model that will be trained on a dataset of house prices in the United States. The model will be trained using the Linear Regression algorithm. 
+This project aims to develop a house price prediction system that can be used by real estate agents and individuals to get an estimate of the price of a house. The system will be developed using a machine learning model that will be trained on a dataset of house prices in the United States. The model will be trained using the Linear Regression algorithm. 
 
 ### Dataset
 
@@ -45,4 +45,11 @@ The frontend will be running on http://localhost:3000/.
 ## Backend
 
 You can find the backend of the project in the following repository: [DSS-Backend](https://github.com/senaoz/dss-backend)
+
+
+<img width="1455" alt="Screenshot 2023-12-16 at 15 11 00" src="https://github.com/senaoz/dss-frontend/assets/66164676/d71445c8-2115-4b10-9a71-b898bac2fc9d">
+<img width="1499" alt="Screenshot 2023-12-16 at 15 11 18" src="https://github.com/senaoz/dss-frontend/assets/66164676/544d8864-1af1-421e-a4ff-165a98b62d4a">
+<img width="1499" alt="Screenshot 2023-12-16 at 15 12 30" src="https://github.com/senaoz/dss-frontend/assets/66164676/c61945c8-6316-47da-9787-1d156048efb2">
+<img width="1499" alt="Screenshot 2023-12-16 at 15 12 49" src="https://github.com/senaoz/dss-frontend/assets/66164676/28bc428c-681c-4f94-b9d1-b77fdc9d9be2">
+
 
