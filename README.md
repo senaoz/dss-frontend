@@ -8,6 +8,10 @@ This project aims to develop a house price prediction system that can be used by
 
 [The project report](https://drive.google.com/file/d/1i7exMdkQ9jYTcxa_U-9_5oSwovDCF-Ub/view?usp=sharing) provides a comprehensive overview of the project.
 
+## [Backend](https://github.com/senaoz/dss-backend)
+
+You can find the backend of the project in the following repository: [DSS-Backend](https://github.com/senaoz/dss-backend)
+
 ### Dataset
 
 The dataset used for this project is the [House Sales in King County, USA](https://www.kaggle.com/harlfoxem/housesalesprediction) dataset from Kaggle. The dataset contains house sale prices for King County, which includes Seattle. It includes homes sold between May 2014 and May 2015. It has 19 house features plus the price and the id columns, along with 21613 observations.
@@ -44,11 +48,6 @@ npm start
 ```
 
 The frontend will be running on http://localhost:3000/.
-
-
-## Backend
-
-You can find the backend of the project in the following repository: [DSS-Backend](https://github.com/senaoz/dss-backend)
 
 
 <img width="1455" alt="Screenshot 2023-12-16 at 15 11 00" src="https://github.com/senaoz/dss-frontend/assets/66164676/d71445c8-2115-4b10-9a71-b898bac2fc9d">
