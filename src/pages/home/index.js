@@ -64,7 +64,8 @@ const Home = () => {
           <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/30">
             Announcing our methods for the price predictions.{" "}
             <a
-              href="https://docs.google.com/document/d/1S1MPKzWqVo03Pg6UEoOhEzbp_V514K9tKRtgVzbqHKg/edit?usp=sharing"
+              href="https://drive.google.com/file/d/1i7exMdkQ9jYTcxa_U-9_5oSwovDCF-Ub/view?usp=sharing"
+              target="_blank"
               className="font-semibold"
             >
               <span className="absolute inset-0" aria-hidden="true" />
